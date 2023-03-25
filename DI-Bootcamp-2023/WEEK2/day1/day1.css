@@ -1,0 +1,91 @@
+
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: lightgreen;
+    border: 2px solid green;
+    height: 500px;
+    width: 500px;
+    align-content: space-around;
+    margin: 20px;
+    
+    
+
+}
+    
+h1{
+color: rgb(76, 195, 29);
+}
+
+.white{
+    background-color: white;
+    height: 50%;
+    width: 70%;
+    margin: 90px;
+    /* padding: 20px; */
+    
+
+}
+
+.red-border{
+    
+border: solid red 2px;
+margin: 5px;
+/* margin-bottom: 50px ;
+padding: 5px; */
+
+
+}
+
+.box1{
+    background-color: aqua;
+    
+    
+}
+
+.box2{
+   
+background-color: aqua;
+width: 50%;
+margin-left: 90px;
+height: 90px;
+
+
+}
+
+.box3{
+background-color: aqua;
+}
+
+/* ex2 */
+.box22{
+   
+    background-color: aqua;
+
+width: 40px;
+margin-left: 88%;
+}
+
+/* ex3 couldn't figure it out*/
+.container2 {
+    display: flex;
+    flex-direction: row;
+    background-color: lightgreen;
+    border: 2px solid green;
+    height: 500px;
+    width: 500px;
+    margin: 20px;
+  }
+  
+  .box111, .box222, .box333 {
+    background-color: white;
+    border: 2px solid red;
+    text-align: center;
+    flex: 1; /* allow boxes to grow to fill available space */
+    margin: 10px;
+  }
+  
+
+
