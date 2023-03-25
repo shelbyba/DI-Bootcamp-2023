@@ -1,0 +1,46 @@
+
+img{
+    height: 500px;
+    width: 100%;
+   size: cover;
+   margin-bottom: 50px;
+   
+    
+}
+
+header{
+    display: block;
+    background-color: lightgray;
+}
+ .div1{
+    float:left;
+    
+
+ }
+
+ .div2{
+    float: right;
+    background: blue;
+    color: white;
+    border-left: 1px;
+ }
+
+ .div3{
+    clear: both;
+ }
+
+
+ .image-container {
+    position: relative;
+  }
+  
+  .centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    /* add any additional styling as needed */
+  }

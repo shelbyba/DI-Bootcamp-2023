@@ -1,0 +1,92 @@
+body {
+    background-image: url("https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  
+  header {
+    background-color: #2196F3;
+    color: white;
+    padding: 10px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  nav a:hover {
+    background-color: white;
+    color: #2196F3;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .hero {
+    text-align: center;
+    color: white;
+    padding: 200px 0;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  
+  .cta-button {
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+  }
+  
+  .cta-button:hover {
+    background-color: #0D47A1;
+  }
+  
+  .courses {
+    background-color: white;
+    padding: 20px;
+    
+  }
+  li{
+color: bisque;
+  }
+  
+  .about-us {
+    background-color: #F5F5F5;
+    padding: 20px;
+  }
+  
+  .contact-us {
+    background-color: #E0E0E0;
+    padding: 20px;
+  }
+  
+  footer {
+    background-color: #2196F3;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
