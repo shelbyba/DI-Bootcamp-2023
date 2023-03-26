@@ -1,0 +1,181 @@
+
+body {
+    background-image: url('https://images.pexels.com/photos/7794362/pexels-photo-7794362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    background-position: center;
+  }  
+
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(8,1fr);
+
+}
+.head{
+    grid-column: 4/span 6;
+    grid-row: 3;
+
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;   
+}
+.num{
+    color: rgb(18, 156, 230);
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+ 
+.number1{
+    grid-column: 4;
+    grid-row: 5;
+}
+
+.number2{
+    grid-column: 6;
+    grid-row: 5;
+}
+
+.number3{
+    grid-column: 8;
+    grid-row: 5;
+}
+.font{
+    font-size: x-small ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.sentence1{
+    grid-column: 4 / span 4;
+    grid-row: 7;
+}
+
+.sentence2{
+    grid-column: 6;
+    grid-row: 7;
+}
+
+.sentence3{
+    grid-column: 8;
+    grid-row: 7;
+}
+
+
+.container2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 100vh;
+    
+    
+  }
+.position{
+    position: relative;
+
+}
+.left{
+    position: absolute;
+    left:10px;
+    top:0px;
+   
+}
+
+.right{
+    position: absolute;
+    right: 10px;
+   top:140px;
+    
+}
+  .left, .right {
+    align-self: flex-end;
+    margin: 100px;
+   
+    height: 200px;
+    width: 200px;
+
+   
+  }
+  
+  .center {
+    margin-bottom: 0px;;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: 40%;
+    bottom:195px
+    
+
+  }
+
+  .bottom{
+    
+
+    height: 90px;
+    margin-top: 0px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    color: aliceblue;
+
+   
+  }
+  
+  .top{
+   
+    
+    height: 150px;
+    align-content: stretch;
+    margin-top: 0px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      }
+  .color{
+    background-color: rgb(173, 91, 91);
+  }
+  .color1{
+    background-color: rgb(57, 57, 135);
+  }
+.color2{
+    background-color: aqua;
+}
+
+.upname{
+    font-weight: bold;
+
+}
+
+    
+      
+.pic{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 75px;
+    left: 40%;
+}
+
+
+.box{
+    border: 1px solid wheat; 
+
+} 
+
+
+ 
+
+  
+  
+
+
+
+
+
+
