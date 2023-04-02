@@ -20,6 +20,23 @@
 //    Console.log the sum of the numbers.
 //    Hint: use some string methods.
 
- let askForNumbers=prompt('type some numbers here with coma in between:');
- let converToNumbers=Number(askForNumbers);
+let input = prompt("Enter a string of numbers separated by commas:");
+let numbers = input.split(",");
+
+let sum = 0;
+for (let i = 0; i < numbers.length; i++) {
+  sum += Number(numbers[i]);
+}
+
+console.log("The sum of the numbers is: " + sum);
+
+
+//xp3
+// Ask the user to give you a sentence containing the word “Nemo”. For example "I love the movie named Nemo"
+// Find the word “Nemo”
+// Console.log a string as follows: "I found Nemo at [the position of the word Nemo]".
+// If you can’t find Nemo, console.log “I can’t find Nemo”.
+let giveMeSentence=prompt('give you a sentence containing the word “Nemo”');
+console.log(`i found demo at ${}`)
+
  
