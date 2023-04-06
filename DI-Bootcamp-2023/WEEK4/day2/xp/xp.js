@@ -318,6 +318,9 @@ totalVacationCost();
 
 
 
+
+
+
 //   let shoppingList=['banana', 'orange','apple'];
   
 //   function myBill(){
