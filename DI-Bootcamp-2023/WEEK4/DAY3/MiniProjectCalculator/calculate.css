@@ -1,0 +1,60 @@
+
+
+body{
+width: 480px;
+height: 480px;
+justify-content: center;
+display: grid;
+grid-template-columns: repeat(4, 80px);
+grid-template-rows: repeat( 6 , 80px);
+position: relative;
+top: 200px;
+left: 250px;
+}
+
+.greenones>button{
+    background-color: rgb(64, 126, 64);
+    
+}
+
+.firstline ,.secondline ,.thirdline, .fourthline{
+    display: flex;
+    flex-direction: row;
+    grid-column: 1/span 5;
+    gap: 5px;
+    
+
+}
+
+.oranges>button{
+ background-color: orange;
+}
+
+.reset{
+   background-color: rgb(75, 75, 168);
+    width: 180%;
+    
+
+    
+}
+
+.clear{
+    background-color: rgb(135, 62, 62);
+    position: relative;
+    width: 190%;
+    left: 70px;
+}
+
+.result{
+    padding: 2px;
+    margin: 5px;
+    width: 279px;
+
+}
+ 
+
+
+
+
+
+
