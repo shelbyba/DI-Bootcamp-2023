@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quote Generator</title>
+</head>
+<body>
+  <section id="quote-section">
+    <!-- Quote will be displayed here -->
+  </section>
+  <button id="generate-quote-btn">Generate Quote</button>
+
+  <form id="add-quote-form">
+    <label for="quote-input">Quote:</label>
+    <input type="text" id="quote-input" required>
+    <label for="author-input">Author:</label>
+    <input type="text" id="author-input" required>
+    <button type="submit">Add Quote</button>
+  </form>
+
+  <div id="quote-info">
+    <button id="character-count-btn">Character Count (with spaces)</button>
+    <button id="character-count-no-spaces-btn">Character Count (without spaces)</button>
+    <button id="word-count-btn">Word Count</button>
+    <button id="like-btn">Like</button>
+  </div>
+
+  <form id="filter-form">
+    <label for="author-filter-input">Filter by Author:</label>
+    <input type="text" id="author-filter-input">
+    <button type="submit">Filter</button>
+  </form>
+
+  <button id="previous-btn">Previous</button>
+  <button id="next-btn">Next</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
