@@ -105,47 +105,8 @@
 // }
 
 
-/*
-fetch('https://jsonplaceholder.typicode.com/users')
-.then((res) => {
-  return res.json();
-})
-.then((data)=>{
-  render(data);
-  // arr = data
-})
-.catch((err)=>{
-  console.log(err);
- */
 
-  /**
-   const root = document.getElementById('root')
-function render(arr) {
-  console.log('render',arr);
-  arr.forEach(item=>{
-    const div = document.createElement('div');
-    const p = document.createElement('p');
-    p.innerText = item.email
-    div.appendChild(p)
-    root.appendChild(div)
-  })
-
-   */
-
-
-  /*
-  const root = document.getElementById('root')
-function render(arr) {
-    const html = arr.map(item => {
-    return `<div style='display:inline-block;border:1px solid #000;'>
-      <img src='https://robohash.org/${item.id}?size=150x150' />
-      <h2>${item.name}</h2>
-      <p>${item.email}</p>
-    </div>`
-  })
-}
-  root.innerHTML = html.join('')
- */
-
-
-
+fetch('https://zivuch.github.io/yogaapi.json')
+.then((res=>{
+    
+}))
