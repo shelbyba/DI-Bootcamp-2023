@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "knex": "^2.5.0",
+    "mocha": "^10.2.0",
+    "pg": "^8.11.1"
+  },
+  "devDependencies": {
+    "supertest": "^6.3.3"
+  }
+}
