@@ -1,0 +1,42 @@
+<html>
+  <% include ../partials/head.ejs %>
+
+  <body>
+    <% include ../partials/header.ejs %>
+
+    <h1>Search</h1>
+
+    <form action="/search" method="POST">
+      <label for="searchTerm">Search Term:</label>
+      <input type="text" id="searchTerm" name="searchTerm" required />
+
+      <label for="searchType">Search Type:</label>
+      <select id="searchType" name="searchType" required>
+        <option value="title">Title</option>
+        <option value="category">Category</option>
+      </select>
+
+      <button type="submit">Search</button>
+    </form>
+
+    <% if (searchResults.length > 0) { %>
+      <h2>Search Results</h2>
+      <div class="search-results">
+        <% searchResults.forEach(post => { %>
+          <div class="post">
+            <a href="<%= post.link %>"><%= post.title %></a>
+            <p>Publication Date: <%= post.pubDate %></p>
+            <p>Creator: <%= post.creator %></p>
+            <p>Category: <%= post.categories.join(', ') %></p>
+            <p><%= post.contentSnippet %></p>
+          </div>
+        <% }) %>
+      </div>
+    <% } else if (searchTerm) { %>
+      <p>No results found.</p>
+    <% } %>
+
+    <% include ../partials/footer.ejs %>
+  </body>
+</html>
+
