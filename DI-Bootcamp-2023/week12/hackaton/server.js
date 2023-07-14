@@ -14,7 +14,7 @@ app.get('/css/style.css', (req, res) => {
     }
   });
 });
-
+s  
 app.use(express.static('public', { extensions: ['html', 'htm', 'css'] }));
 
 
