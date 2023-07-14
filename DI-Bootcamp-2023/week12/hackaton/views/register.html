@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Hackathon - Register</title>
+  <link rel="stylesheet" type="text/css" href="../public/css/style.css">
+
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header, nav, main {
+    padding: 20px;
+  }
+  
+  header {
+    background-color: #f2f2f2;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+  }
+  
+  main {
+    background-color: #ffffff;
+  }
+  
+  h2 {
+    margin-top: 0;
+  }
+  
+</style>
+<body>
+  <header>
+    <h1>Simple Hackathon</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/register">Register</a></li>
+      <li><a href="/details">Details</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h2>Register for the Hackathon</h2>
+    <form action="/register" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br>
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+  <script src="js/script.js"></script>
+</body>
+</html>

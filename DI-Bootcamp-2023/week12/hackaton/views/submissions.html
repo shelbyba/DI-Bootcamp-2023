@@ -1,0 +1,37 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Hackathon - Submissions</title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Simple Hackathon</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/register.html">Register</a></li>
+      <li><a href="/details.html">Details</a></li>
+      <li><a href="/submissions">Submissions</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h2>Submission Details</h2>
+    <div id="submission-container"></div>
+  </main>
+  <script src="/js/script.js"></script>
+  <script>
+    fetch('/submissions')
+      .then(response => response.json())
+      .then(submissions => {
+        const container = document.getElementById('submission-container');
+        submissions.forEach(submission => {
+          const submissionElement = document.createElement('div');
+          submissionElement.innerHTML = `<p>Name: ${submission.name}</p><p>Email: ${submission.email}</p>`;
+          container.appendChild(submissionElement);
+        });
+      });
+  </script>
+</body>
+</html> -->
