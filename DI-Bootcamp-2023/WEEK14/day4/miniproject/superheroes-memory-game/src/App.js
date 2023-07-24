@@ -1,16 +1,15 @@
 // src/App.js
 import React from 'react';
-import TodoLkist from './TodoList'; // Correct import statement with an uppercase 'L'
-
+import Game from './Game';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Todo List</h1>
-      <TodoList />
+      <Game />
     </div>
   );
 }
 
 export default App;
+
