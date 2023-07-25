@@ -32,13 +32,13 @@ const Game = () => {
 
     const clickedSuperhero = superheroes.find((hero) => hero.id === id);
     if (clickedSuperhero.clicked) {
-      // User clicked the same card twice, reset the game
+     
       setScore(0);
       setSuperheroes((prevSuperheroes) =>
         prevSuperheroes.map((hero) => ({ ...hero, clicked: false }))
       );
     } else {
-      // User clicked a new card, increase the score
+     
       setScore((prevScore) => prevScore + 1);
       if (score + 1 > topScore) {
         // Update the top score
@@ -46,7 +46,7 @@ const Game = () => {
       }
     }
 
-    // Shuffle the cards after every click
+   
     shuffleCards();
   };
 

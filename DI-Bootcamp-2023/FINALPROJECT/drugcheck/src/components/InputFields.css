@@ -1,0 +1,75 @@
+
+.input-fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    margin-top: 50px;
+  }
+  
+  h2 {
+    color: #81a1c4;
+    margin-bottom: 20px; /* Add some spacing between the titles and other elements */
+  }
+  
+  input {
+    width: 200px;
+    margin-bottom: 10px; /* Add some spacing between the input fields */
+    padding: 12px;
+  }
+  
+  button {
+    background-color: #252763; /* Gold-like color (glory) */
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 10px; /* Make the buttons a bit round */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add more shadow for a pronounced 3D effect */
+    transition: transform 0.2s ease; /* Add a smooth transition on hover */
+    width:100px;
+  }
+  
+  /* On hover, add a slight scale effect to the button */
+  button:hover {
+    transform: scale(1.05);
+  }
+  
+  .drug-check-btn {
+    display: block;
+    background-color:#252763; /* Blue color for the DrugCheck button */
+    color: #fff;
+    padding: 18px 36px;
+    font-size: 24px; /* Make the DrugCheck button bigger */
+    border: none;
+    cursor: pointer;
+    margin: 20px auto; /* Center-align the DrugCheck button */
+    border-radius: 10px; /* Make the button a bit round */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add more shadow for a pronounced 3D effect */
+    transition: transform 0.2s ease; /* Add a smooth transition on hover */
+    width: 200px;
+    margin: 0 auto;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  
+  /* On hover, add a slight scale effect to the button */
+  .drug-check-btn:hover {
+    transform: scale(1.05);
+  }
+  
+  .answer-container {
+    flex: 1; /* Make the container take available space to push it to the right */
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 40px;
+    text-align: left; /* Align the content inside the container to the left */
+  }
+  .answer-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  
