@@ -1,16 +1,13 @@
 import React from 'react';
 import Header from './components/Header.js';
 import InputFields from './components/InputFields.js';
-import 'whatwg-fetch';
 import './App.css';
 
 function App() {
-  const BACKEND_URL = 'http://localhost:5000'; // Replace this with your actual backend URL
-
   return (
     <div className="App">
       <Header />
-      <InputFields backendUrl={BACKEND_URL} /> {/* Pass the prop here */}
+      <InputFields /> {/* No need to pass the backendUrl prop anymore */}
       {/* Footer */}
       <footer>
         <p className="footer-name">
@@ -21,14 +18,4 @@ function App() {
   );
 }
 
-
-
-
-
-
-
-
 export default App;
-
-
-

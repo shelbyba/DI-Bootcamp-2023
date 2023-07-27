@@ -64,12 +64,23 @@
     border: 1px solid #ccc;
     padding: 20px;
     margin-top: 40px;
+    margin-right: 20px; /* Add additional spacing on the right side */
     text-align: left; /* Align the content inside the container to the left */
+    max-width: 950px; /* Set a maximum width to prevent elongation */
+    max-height: 400px; /* Set a maximum height to limit the container's height */
+    overflow-y: auto; /* Add vertical scrollbar if the content exceeds the height */
   }
+  
+  .answer-container pre {
+    white-space: normal; /* Allow content to wrap within <pre> element */
+    word-break: break-all; /* Break long words and wrap them */
+  }
+  
+  
   .answer-title {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
+    width: 100%; /* Add a width to the title to make it full width */
   }
-  
   

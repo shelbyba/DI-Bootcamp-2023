@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './InputFields.css';
 
-const InputFields = ({ backendUrl }) => {
+const InputFields = () => {
   const [newDrug, setNewDrug] = useState('');
   const [interactionResult, setInteractionResult] = useState('');
 
@@ -12,7 +12,7 @@ const InputFields = ({ backendUrl }) => {
 
   const handleDrugCheck = async () => {
     const trimmedDrugName = newDrug.trim();
-    
+  
     // Check if the drug name is valid
     if (trimmedDrugName === '') {
       setInteractionResult({
@@ -21,34 +21,52 @@ const InputFields = ({ backendUrl }) => {
       });
     } else {
       try {
-        // Fetch drug-gene interactions from the DGIdb API
-        const response = await axios.get(`${backendUrl}/drug-interaction-proxy?genes=${trimmedDrugName}`);
-        console.log(response.data)
-        const data = response.data;
-    
-        // Check if any interactions are found
-        if (data.matchedTerms && data.matchedTerms.length > 0) {
-          const interactionData = data.matchedTerms[0];
-          setInteractionResult({
-            drug: interactionData.query,
-            interaction: interactionData.interactions.map((interaction) => interaction.drug_name).join(', '),
-          });
+        // Fetch drug information from the new API
+        const url = `https://drug-info-and-price-history.p.rapidapi.com/1/druginfo?drug=${trimmedDrugName}`;
+        const options = {
+          method: 'GET',
+          headers: {
+            'X-RapidAPI-Key': '68e0c23431msh12720205c98faa6p15ed5bjsn417519be571c',
+            'X-RapidAPI-Host': 'drug-info-and-price-history.p.rapidapi.com',
+          },
+        };
+  
+        const response = await fetch(url, options);
+        const data = await response.json();
+  
+        if (data.length > 0) {
+          const lastInformation = data[data.length - 1];
+          const pharmClasses = lastInformation['pharm_class'];
+  
+          // Check if pharmClasses exists and is an array before calling join
+          if (Array.isArray(pharmClasses)) {
+            setInteractionResult({
+              drug: trimmedDrugName,
+              interaction: `Pharmacological Classes: ${pharmClasses.join(', ')}`,
+            });
+          } else {
+            setInteractionResult({
+              drug: trimmedDrugName,
+              interaction: 'Pharmacological Classes data not available.',
+            });
+          }
         } else {
           setInteractionResult({
             drug: trimmedDrugName,
-            interaction: 'No known interactions.',
+            interaction: 'No information found for the drug.',
           });
         }
       } catch (error) {
-        console.error('Error while fetching drug interaction data:', error.message);
+        console.error('Error while fetching drug information:', error.message);
         setInteractionResult({
           drug: trimmedDrugName,
-          interaction: 'An error occurred while fetching drug interaction data',
+          interaction: 'An error occurred while fetching drug information',
         });
       }
     }
   };
   
+
   return (
     <div className="input-fields">
       {/* Left Section */}

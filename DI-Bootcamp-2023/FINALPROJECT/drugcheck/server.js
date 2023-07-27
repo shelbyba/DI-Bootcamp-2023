@@ -11,12 +11,23 @@ app.get('/drug-interaction-proxy', async (req, res) => {
   const { genes } = req.query;
 
   try {
-    const response = await fetch(`https://dgidb.org/api/v2/interactions.json?genes=${genes}`);
-    const data = await response.json();
+    // Use the new API endpoint here
+    const url = `https://drug-info-and-price-history.p.rapidapi.com/1/druginfo?drug=${genes}`;
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-RapidAPI-Key': '68e0c23431msh12720205c98faa6p15ed5bjsn417519be571c',
+        'X-RapidAPI-Host': 'drug-info-and-price-history.p.rapidapi.com',
+      },
+    };
+
+    const response = await fetch(url, options);
+    const data = await response.text();
+
     res.send(data);
   } catch (error) {
-    console.error('Error while fetching drug interaction data:', error.message);
-    res.status(500).send('An error occurred while fetching drug interaction data.');
+    console.error('Error while fetching drug information:', error.message);
+    res.status(500).send('An error occurred while fetching drug information.');
   }
 });
 
